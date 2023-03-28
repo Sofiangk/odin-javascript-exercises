@@ -7,7 +7,5 @@ const reverseString = function (text) {
   return string;
 };
 
-reverseString("hello there");
-
 // Do not edit below this line
 module.exports = reverseString;
