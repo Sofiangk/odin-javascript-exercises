@@ -1,14 +1,9 @@
 const palindromes = function (text) {
   let noSpacesString = text
     .replace(/\s+/g, "")
-    .toLowerCase()
-    .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
-  let reversedString = noSpacesString
-    .split("")
-    .reverse()
-    .join("")
+    .replace(/[^\w\s\']/g, "")
     .toLowerCase();
-  return noSpacesString === reversedString;
+  return noSpacesString === noSpacesString.split("").reverse().join("");
 };
 
 // Do not edit below this line
